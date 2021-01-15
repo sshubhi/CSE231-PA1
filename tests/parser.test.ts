@@ -21,6 +21,8 @@ describe('traverseExpr(c, s) function', () => {
 
     // Note: we have to use deep equality when comparing objects
     expect(parsedExpr).to.deep.equal({tag: "num", value: 987});
+    //console.log("Printing for MY TEST!!!!!!!\n");
+    //console.log(parsedExpr);
   })
 
   // TODO: add additional tests here to ensure traverseExpr works as expected
@@ -28,6 +30,17 @@ describe('traverseExpr(c, s) function', () => {
 
 describe('traverseStmt(c, s) function', () => {
   // TODO: add tests here to ensure traverseStmt works as expected
+  it ('parses a statement',() => {
+    const source = "2 + 3";
+    const cursor = parser.parse(source).cursor();
+
+    // go to statement
+    cursor.firstChild();
+    const parsedExpr = traverseStmt(cursor,source);
+    console.log("Printing for MY TEST!!!!!!!\n");
+    //console.log(parsedExpr);
+  }
+  )
 });
 
 describe('traverse(c, s) function', () => {

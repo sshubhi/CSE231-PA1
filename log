@@ -1,0 +1,293 @@
+
+> web-asm-jit@0.0.1 test /home/sshubhi/CSE231/pa1-sshubhi
+> env TS_NODE_COMPILER_OPTIONS='{"module": "commonjs" }' mocha -r ts-node/register 'tests/**/*.test.ts'
+
+
+
+  traverseExpr(c, s) function
+Printing for MY TEST!!!!!!!
+
+{ tag: 'binary',
+  arg1: { tag: 'num', value: 2 },
+  op: '+',
+  arg2: { tag: 'num', value: 3 } }
+    ✓ parses a number in the beginning
+
+  traverseStmt(c, s) function
+    ✓ parses a statement
+
+  parse(source) function
+traversed 1 statements  [ { tag: 'expr', expr: { tag: 'num', value: 987 } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 3,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+    ✓ parse a number
+
+  run(source, config) function
+traversed 1 statements  [ { tag: 'expr', expr: { tag: 'num', value: 987 } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 3,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+traversed 1 statements  [ { tag: 'expr', expr: { tag: 'num', value: 987 } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 3,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+Generated:  (local $$last i32)
+(i32.const 987)
+(local.set $$last)
+    ✓ returns the right number (88ms)
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'builtin1', name: 'print', arg: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 11,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'builtin1', name: 'print', arg: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 11,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+Generated:  (local $$last i32)
+(i32.const 1337)
+(call $print)
+(local.set $$last)
+    ✓ prints something right
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'builtin1', name: 'print', arg: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 10,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'builtin1', name: 'print', arg: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 10,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+Generated:  (local $$last i32)
+(i32.const 987)
+(call $print)
+(local.set $$last)
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'builtin1', name: 'print', arg: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 10,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'builtin1', name: 'print', arg: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 10,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+Generated:  (local $$last i32)
+(i32.const 123)
+(call $print)
+(local.set $$last)
+    ✓ prints two numbers but returns last one (52ms)
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'binary', arg1: [Object], op: '+', arg2: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 5,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+traversed 1 statements  [ { tag: 'expr',
+    expr: { tag: 'binary', arg1: [Object], op: '+', arg2: [Object] } } ] stopped at  BufferNode {
+  context:
+   BufferContext {
+     parent: TreeNode { node: [Tree], from: 0, index: 0, _parent: null },
+     buffer:
+      TreeBuffer {
+        buffer: [Uint16Array],
+        length: 5,
+        set: [NodeSet],
+        type: [NodeType] },
+     index: 0,
+     start: 0 },
+  _parent: null,
+  index: 0,
+  type:
+   NodeType {
+     name: 'ExpressionStatement',
+     props: [Object: null prototype] { '2': [Array] },
+     id: 83,
+     flags: 0 } }
+Generated:  (local $$last i32)
+(i32.const 2)
+(local.set $$last)
+    1) adds two numbers
+
+
+  6 passing (199ms)
+  1 failing
+
+  1) run(source, config) function
+       adds two numbers:
+
+      AssertionError: expected 2 to equal 5
+      + expected - actual
+
+      -2
+      +5
+      
+      at /home/sshubhi/CSE231/pa1-sshubhi/tests/runner.test.ts:75:23
+      at step (tests/runner.test.ts:33:23)
+      at Object.next (tests/runner.test.ts:14:53)
+      at fulfilled (tests/runner.test.ts:5:58)
+
+
+

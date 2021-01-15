@@ -1,6 +1,6 @@
 const python = require('lezer-python');
 
-const input = "pow(x,y)";
+const input = "10 + 8";
 
 const tree = python.parser.parse(input);
 

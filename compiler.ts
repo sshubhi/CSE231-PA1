@@ -50,24 +50,29 @@ function codeGenExpr(expr : Expr) : Array<string> {
       const argStmts = codeGenExpr(expr.arg);
       return argStmts.concat([`(call $${expr.name})`]);
     case "builtin2":
-      const built2Stmts = codeGenExpr(expr.arg1);
-      built2Stmts.concat(codeGenExpr(expr.arg2));
+      let built2Stmts = codeGenExpr(expr.arg1);
+      built2Stmts = built2Stmts.concat(codeGenExpr(expr.arg2));
       return built2Stmts.concat([`(call $${expr.name})`]);
     case "num":
       return ["(i32.const " + expr.value + ")"];
     case "id":
       return [`(local.get $${expr.name})`];
     case "binary":
-      const biStmts = codeGenExpr(expr.arg1);
-      biStmts.concat(codeGenExpr(expr.arg2));
+      let biStmts = codeGenExpr(expr.arg1);
+      biStmts = biStmts.concat(codeGenExpr(expr.arg2));
+      //console.log("\n printing now :   \n");
+      //console.log( biStmts);
+      //console.log("\n done printing!!");
       switch(expr.op) {
-        case "+" : biStmts.concat([`(i32.add)`]);
+        case "+" : biStmts = biStmts.concat([`(i32.add)`]);
                   break;
-        case "-" : biStmts.concat([`(i32.sub)`]);
+        case "-" : biStmts = biStmts.concat([`(i32.sub)`]);
                   break;
-        case "*" : biStmts.concat([`(i32.mul)`]);
+        case "*" : biStmts = biStmts.concat([`(i32.mul)`]);
                   break;
       }
+      //console.log("Printing SUMIRAN's debug messages:\n");
+      //console.log(biStmts);
       return biStmts;
   }
 }
